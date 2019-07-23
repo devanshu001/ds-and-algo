@@ -1,0 +1,22 @@
+using namespace std;
+#define llt int
+
+llt digits(llt n){
+    if(n<0) return 0;
+    if(n<=1) return 1;
+    double count=0;
+    for(llt i=2;i<=n;i++){
+        count+=log10(i);
+    }
+    return floor(count)+1;
+}
+int main() {
+    llt T;
+	cin>>T;
+	for(llt i=0;i<T;i++){
+	    llt num;
+	    cin>>num;
+	    cout<<digits(num)<<endl;
+	}
+	return 0;
+}
